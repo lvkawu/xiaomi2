@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
+        Toast.makeText(this,"ttttt",Toast.LENGTH_LONG).show();
     }
 
     public void onClick(View view) {
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
             case R.id.test_scan_qrcode:
                 startActivity(new Intent(this, TestScanActivity.class));
                 break;
+
         }
     }
 
